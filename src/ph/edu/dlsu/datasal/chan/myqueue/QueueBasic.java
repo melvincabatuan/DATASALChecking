@@ -1,6 +1,6 @@
 package ph.edu.dlsu.datasal.chan.myqueue;
 
-import ph.edu.dlsu.datasal.chan.mylinkedlist.MyLinkedList;
+import ph.edu.dlsu.datasal.chan.mylinkedlist.MyList;
 import ph.edu.dlsu.datasal.chan.myinterface.QueueInterface;
 import ph.edu.dlsu.datasal.chan.myexception.QueueEmptyException;
 
@@ -9,7 +9,7 @@ import ph.edu.dlsu.datasal.chan.myexception.QueueEmptyException;
  /* @author Patrick Matthew J. Chan [LBYCP12-EQ1]*/
 public class QueueBasic<E> implements QueueInterface<E> {
 
-    protected MyLinkedList<E> items = new MyLinkedList<>();
+    protected MyList<E> items = new MyList<>();
 
     //constructor
     public QueueBasic() {

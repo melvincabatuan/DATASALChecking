@@ -1,7 +1,7 @@
 package ph.edu.dlsu.datasal.chan.myqueue;
 
 import java.util.Collection;
-import ph.edu.dlsu.datasal.chan.mylinkedlist.MyLinkedList;
+import ph.edu.dlsu.datasal.chan.mylinkedlist.MyList;
 
 /* © 2017 by Patrick Matthew Chan */
 

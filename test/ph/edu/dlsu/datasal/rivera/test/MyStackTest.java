@@ -3,30 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ph.edu.dlsu.datasal.test;
+package ph.edu.dlsu.datasal.rivera.test;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import ph.edu.dlsu.datasal.chan.myexception.StackEmptyException;
-import ph.edu.dlsu.datasal.chan.mystack.Stack;
-import ph.edu.dlsu.datasal.chan.mystack.StackInt;
+import ph.edu.dlsu.rivera.mystack.MyStack;
 
 /**
  *
  * @author cobalt
  */
 public class MyStackTest {
-    
-    private Stack myStack;
+
+    private MyStack myStack;
 
     public MyStackTest() {
     }
 
     @Before
     public void setUp() {
-        myStack = new Stack();
+        myStack = new MyStack();
     }
 
     @After
@@ -35,7 +33,7 @@ public class MyStackTest {
     }
 
     @Test
-    public void initializationTest() {        
+    public void initializationTest() {
         assertTrue("Stack should be empty!", myStack.isEmpty());
         myStack.push("Alpha");
         assertTrue("Stack should not be empty!", !myStack.isEmpty());
@@ -58,7 +56,7 @@ public class MyStackTest {
         assertEquals("Beta", myStack.top());
     }
 
-    @Test(expected = StackEmptyException.class)
+    @Test
     public void popTest() {
         myStack.push("Alpha");
         myStack.push("Beta");
@@ -69,7 +67,6 @@ public class MyStackTest {
         assertEquals("Alpha", myStack.top());
         myStack.pop();
         assertTrue(myStack.size() == 0);
-        myStack.pop();  // StackEmptyException
     }
 
     @Test
@@ -88,7 +85,7 @@ public class MyStackTest {
         myStack.push("Alpha");
         myStack.push("Beta");
         myStack.push("Gamma");
-        Stack sample = new Stack();
+        MyStack sample = new MyStack();
         sample.push("Alpha");
         sample.push("Beta");
         assertTrue(sample.containsAll(sample));
@@ -100,7 +97,7 @@ public class MyStackTest {
 
     @Test
     public void addAllTest() {
-        Stack sample = new Stack();
+        MyStack sample = new MyStack();
         sample.push("Alpha");
         sample.push("Beta");
         myStack.addAll(sample);
@@ -114,7 +111,7 @@ public class MyStackTest {
         myStack.push("Alpha");
         myStack.push("Beta");
         myStack.push("Gamma");
-        Stack sample = new Stack();
+        MyStack sample = new MyStack();
         sample.push("Alpha");
         sample.push("Beta");
         myStack.removeAll(sample);
@@ -160,7 +157,7 @@ public class MyStackTest {
         myStack.push(4);
         myStack.push(3);
         myStack.sort();
-        
+
         // if highest is TOS
 //        assertTrue(myStack.top() == 5);
 //        myStack.pop();

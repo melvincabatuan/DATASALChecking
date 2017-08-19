@@ -5,7 +5,7 @@ package ph.edu.dlsu.datasal.chan.mylinkedlist;
 import ph.edu.dlsu.datasal.chan.myarraylist.*;
 //import java.lang.reflect.Field;//optional,for toString shortcut
 /* @author Patrick Matthew J. Chan [LBYCP12-EQ1]*/
-public class MyLinkedListInt extends MyLinkedList<Integer> {
+public class MyLinkedListInt extends MyList<Integer> {
     
         
     public MyLinkedListInt(){//constructor
