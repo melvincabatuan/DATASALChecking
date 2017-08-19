@@ -17,10 +17,7 @@ package ph.edu.dlsu.datasal.chan.myarraylist;
 import ph.edu.dlsu.datasal.chan.myexception.ListFullException;
 import ph.edu.dlsu.datasal.chan.myexception.ListIndexOutOfBoundsException;
 import ph.edu.dlsu.datasal.chan.myinterface.*;
-import acm.program.*;
-import acm.util.*;
 import java.util.Arrays;
-import java.util.Collection;
 
 
 public class MyArrayList<E> implements List<E>{
@@ -30,8 +27,6 @@ public class MyArrayList<E> implements List<E>{
     private int MAX_LIST = DEF_MAX;     // max length of list
     private E[] items;                     // array of list items
     private int NumItems;                  // current size of list
-
-
 
 
     public MyArrayList(){
