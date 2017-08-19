@@ -22,3 +22,7 @@ MyBstTest.java
 ![](https://github.com/melvincabatuan/DATASALChecking/blob/master/Test3.PNG)
 ![](https://github.com/melvincabatuan/DATASALChecking/blob/master/Test4.PNG)
 ![](https://github.com/melvincabatuan/DATASALChecking/blob/master/Test5.PNG)
+
+## Test Suite sample
+
+![](https://github.com/melvincabatuan/DATASALChecking/blob/master/Test6.PNG)
