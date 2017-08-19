@@ -11,16 +11,16 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import ph.edu.dlsu.datasal.chan.myarraylist.MyLinkedList;
-import ph.edu.dlsu.datasal.chan.myarraylist.MyArrayListInt;
 import ph.edu.dlsu.datasal.chan.myexception.ListIndexOutOfBoundsException;
+import ph.edu.dlsu.datasal.chan.mylinkedlist.MyLinkedListInt;
 
 /**
  *
  * @author cobalt
  */
-public class MyArrayListTest {
+public class MyLinkedListTest {
 
-    public MyArrayListTest() {
+    public MyLinkedListTest() {
     }
 
     @Before
@@ -191,7 +191,7 @@ public class MyArrayListTest {
 
     @Test
     public void sortTest() {
-        MyArrayListInt list = new MyArrayListInt();
+        MyLinkedListInt list = new MyLinkedListInt();
         list.add(1);
         list.add(5);
         list.add(2);

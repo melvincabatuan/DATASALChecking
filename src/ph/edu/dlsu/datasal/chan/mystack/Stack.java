@@ -1,7 +1,7 @@
 package ph.edu.dlsu.datasal.chan.mystack;
 
 import java.util.Collection;
-import ph.edu.dlsu.datasal.chan.myarraylist.MyArrayList;
+import ph.edu.dlsu.datasal.chan.myarraylist.MyLinkedList;
 
 
 public class Stack<E> extends StackBasic<E>{
@@ -73,12 +73,12 @@ public class Stack<E> extends StackBasic<E>{
     }
     public boolean removeAll(Stack<E> c){
         boolean isChanged=false;
-        MyArrayList<E> tempL1=new MyArrayList(size()+10);
+        MyLinkedList<E> tempL1=new MyLinkedList(size()+10);
         while(!isEmpty()){
             tempL1.add(top());
             pop();
         }
-        MyArrayList<E> tempL2=new MyArrayList(c.size()+10);
+        MyLinkedList<E> tempL2=new MyLinkedList(c.size()+10);
         while(!c.isEmpty()){
             tempL2.add(top());
             c.pop();

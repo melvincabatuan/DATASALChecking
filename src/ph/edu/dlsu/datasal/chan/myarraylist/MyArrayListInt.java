@@ -2,7 +2,7 @@
 package ph.edu.dlsu.datasal.chan.myarraylist;
 //import java.lang.reflect.Field;//optional,for toString shortcut
 /* @author Patrick Matthew J. Chan [LBYCP12-EQ1]*/
-public class MyArrayListInt extends MyArrayList<Integer> {
+public class MyArrayListInt extends MyLinkedList<Integer> {
     
         
     public MyArrayListInt(){//constructor

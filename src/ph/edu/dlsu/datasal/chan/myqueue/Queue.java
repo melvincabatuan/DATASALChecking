@@ -48,6 +48,7 @@ public class Queue<E> extends QueueBasic<E>{
         }
         return true;
     }
+    
     public boolean addAll(Collection<? extends E> c){
         for(Object o:c){
             try{
