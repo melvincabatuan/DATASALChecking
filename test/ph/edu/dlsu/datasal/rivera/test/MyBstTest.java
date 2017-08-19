@@ -3,12 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ph.edu.dlsu.datasal.chan.test;
+package ph.edu.dlsu.datasal.rivera.test;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import ph.edu.dlsu.datasal.chan.mytree.BinarySearchTree;
@@ -31,26 +29,24 @@ public class MyBstTest {
         bst.add(10, 14, 13);            // right subtree
     }
 
-    @After
-    public void tearDown() {
-    }
-
     @Test
     public void bstSearchTest() {
-        BinarySearchTree query = bst.search(13);
-        assertTrue(query.root == 13);
-        query = bst.search(8);
-        assertTrue(query.root == 8);
-        query = bst.search(1);
-        assertTrue(query.root == 1);
-        query = bst.search(20);
-        assertTrue(query == null);
+        fail("This method is not yet implemented");
+//        BinarySearchTree query = bst.search(13);
+//        assertTrue(query.root == 13);
+//        query = bst.search(8);
+//        assertTrue(query.root == 8);
+//        query = bst.search(1);
+//        assertTrue(query.root == 1);
+//        query = bst.search(20);
+//        assertTrue(query == null);
     }
 
     @Test
     public void bstStructureTest() {
-        assertTrue(bst.root == 8);
-        assertTrue(bst.left.root == 3);
-        assertTrue(bst.right.root == 10);
+         fail("This method is not yet implemented");
+//        assertTrue(bst.root == 8);
+//        assertTrue(bst.left.root == 3);
+//        assertTrue(bst.right.root == 10);
     }
 }

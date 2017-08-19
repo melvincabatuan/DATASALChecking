@@ -71,61 +71,65 @@ public class MyStackTest {
 
     @Test
     public void containsTest() {
-        myStack.push("Alpha");
-        myStack.push("Beta");
-        myStack.push("Gamma");
-        assertTrue(myStack.contains("Alpha"));
-        assertTrue(myStack.contains("Beta"));
-        assertTrue(myStack.contains("Gamma"));
-        assertFalse(myStack.contains("Omega"));
+        fail("This method is not yet implemented");
+//        myStack.push("Alpha");
+//        myStack.push("Beta");
+//        myStack.push("Gamma");
+//        assertTrue(myStack.contains("Alpha"));
+//        assertTrue(myStack.contains("Beta"));
+//        assertTrue(myStack.contains("Gamma"));
+//        assertFalse(myStack.contains("Omega"));
     }
 
     @Test
     public void containsAllTest() {
-        myStack.push("Alpha");
-        myStack.push("Beta");
-        myStack.push("Gamma");
-        MyStack sample = new MyStack();
-        sample.push("Alpha");
-        sample.push("Beta");
-        assertTrue(sample.containsAll(sample));
-        assertTrue(myStack.containsAll(sample));
-        assertFalse(sample.containsAll(myStack));
-        sample.push("Omega");
-        assertFalse(myStack.containsAll(sample));
+        fail("This method is not yet implemented");
+//        myStack.push("Alpha");
+//        myStack.push("Beta");
+//        myStack.push("Gamma");
+//        MyStack sample = new MyStack();
+//        sample.push("Alpha");
+//        sample.push("Beta");
+//        assertTrue(sample.containsAll(sample));
+//        assertTrue(myStack.containsAll(sample));
+//        assertFalse(sample.containsAll(myStack));
+//        sample.push("Omega");
+//        assertFalse(myStack.containsAll(sample));
     }
 
     @Test
     public void addAllTest() {
-        MyStack sample = new MyStack();
-        sample.push("Alpha");
-        sample.push("Beta");
-        myStack.addAll(sample);
-        assertTrue(myStack.size() == 2);
-        assertTrue(myStack.contains("Alpha"));
-        assertTrue(myStack.contains("Beta"));
+        fail("This method is not yet implemented");
+//        MyStack sample = new MyStack();
+//        sample.push("Alpha");
+//        sample.push("Beta");
+//        myStack.addAll(sample);
+//        assertTrue(myStack.size() == 2);
+//        assertTrue(myStack.contains("Alpha"));
+//        assertTrue(myStack.contains("Beta"));
     }
 
     @Test
     public void removeAllTest() {
-        myStack.push("Alpha");
-        myStack.push("Beta");
-        myStack.push("Gamma");
-        MyStack sample = new MyStack();
-        sample.push("Alpha");
-        sample.push("Beta");
-        myStack.removeAll(sample);
-        assertTrue(myStack.size() == 1);
-        assertFalse(myStack.contains("Alpha"));
-        assertFalse(myStack.contains("Beta"));
-        assertTrue(myStack.contains("Gamma"));
+        fail("This method is not yet implemented");
+//        myStack.push("Alpha");
+//        myStack.push("Beta");
+//        myStack.push("Gamma");
+//        MyStack sample = new MyStack();
+//        sample.push("Alpha");
+//        sample.push("Beta");
+//        myStack.removeAll(sample);
+//        assertTrue(myStack.size() == 1);
+//        assertFalse(myStack.contains("Alpha"));
+//        assertFalse(myStack.contains("Beta"));
+//        assertTrue(myStack.contains("Gamma"));
     }
 
     @Test
     public void equalsTest() {
         myStack.push("Alpha");
         myStack.push("Beta");
-        Stack sample = new Stack();
+        MyStack sample = new MyStack();
         sample.push("Alpha");
         sample.push("Beta");
         assertTrue(myStack.equals(sample));
@@ -137,27 +141,28 @@ public class MyStackTest {
 
     @Test
     public void intersectionTest() {
-        myStack.push("Alpha");
-        myStack.push("Beta");
-        Stack sample = new Stack();
-        sample.push("Alpha");
-        sample.push("Beta");
-        sample.push("Gamma");
-        assertEquals(myStack, myStack.intersection(sample));
-        assertEquals(myStack, sample.intersection(myStack));
-        assertEquals(myStack, myStack.intersection(myStack));
+        fail("This method is not yet implemented");
+//        myStack.push("Alpha");
+//        myStack.push("Beta");
+//        MyStack sample = new MyStack();
+//        sample.push("Alpha");
+//        sample.push("Beta");
+//        sample.push("Gamma");
+//        assertEquals(myStack, myStack.intersection(sample));
+//        assertEquals(myStack, sample.intersection(myStack));
+//        assertEquals(myStack, myStack.intersection(myStack));
     }
 
     @Test
     public void sortTest() {
-        StackInt myStack = new StackInt();
-        myStack.push(1);
-        myStack.push(5);
-        myStack.push(2);
-        myStack.push(4);
-        myStack.push(3);
-        myStack.sort();
-
+        fail("This method is not yet implemented");
+//        MyStack myStack = new MyStack();
+//        myStack.push(1);
+//        myStack.push(5);
+//        myStack.push(2);
+//        myStack.push(4);
+//        myStack.push(3);
+        //myStack.sort();
         // if highest is TOS
 //        assertTrue(myStack.top() == 5);
 //        myStack.pop();
