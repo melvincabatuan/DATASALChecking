@@ -89,5 +89,9 @@ public class Queue<E> extends QueueBasic<E>{
             return false;
         }
     }
+    public Queue<E> intersection(Queue<E> comp){
+        return null;
+    }
+    
     
 }

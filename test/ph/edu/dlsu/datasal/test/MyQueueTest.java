@@ -15,6 +15,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import ph.edu.dlsu.datasal.chan.myexception.QueueEmptyException;
 import ph.edu.dlsu.datasal.chan.myqueue.Queue;
+import ph.edu.dlsu.datasal.chan.myqueue.QueueInt;
 
 /**
  *
@@ -100,19 +101,83 @@ public class MyQueueTest {
         assertTrue(myQueue.contains("Gamma"));
         assertFalse(myQueue.contains("Omega"));
     }
+
+    @Test
+    public void containsAllTest() {
+        myQueue.push("Alpha");
+        myQueue.push("Beta");
+        myQueue.push("Gamma");
+        Collection<String> sample = new ArrayList<>();
+        sample.add("Alpha");
+        sample.add("Beta");
+        assertTrue(sample.containsAll(sample));
+        assertTrue(myQueue.containsAll(sample));
+        sample.add("Omega");
+        assertFalse(myQueue.containsAll(sample));
+    }
+
+    @Test
+    public void addAllTest() {
+        Collection<String> sample = new ArrayList<>();
+        sample.add("Alpha");
+        sample.add("Beta");
+        myQueue.addAll(sample);
+        assertTrue(myQueue.size() == 2);
+        assertTrue(myQueue.contains("Alpha"));
+        assertTrue(myQueue.contains("Beta"));
+    }
+
+    @Test
+    public void removeAllTest() {
+        myQueue.push("Alpha");
+        myQueue.push("Beta");
+        myQueue.push("Gamma");
+        Collection<String> sample = new ArrayList<>();
+        sample.add("Alpha");
+        sample.add("Beta");
+        myQueue.removeAll(sample);
+        assertTrue(myQueue.size() == 1);
+        assertFalse(myQueue.contains("Alpha"));
+        assertFalse(myQueue.contains("Beta"));
+        assertTrue(myQueue.contains("Gamma"));
+    }
+
+    @Test
+    public void equalsTest() {
+        myQueue.push("Alpha");
+        myQueue.push("Beta");
+        Queue sample = new Queue();
+        sample.push("Alpha");
+        sample.push("Beta");
+        assertTrue(myQueue.equals(sample));
+        assertTrue(sample.equals(myQueue));
+        sample.push("Gamma");
+        assertFalse(myQueue.equals(sample));
+        assertFalse(sample.equals(myQueue));
+    }
+
+    @Test
+    public void intersectionTest() {
+        myQueue.push("Alpha");
+        myQueue.push("Beta");
+        Queue sample = new Queue();
+        sample.push("Alpha");
+        sample.push("Beta");
+        sample.push("Gamma");
+        assertEquals(myQueue, myQueue.intersection(sample));
+        assertEquals(myQueue, sample.intersection(myQueue));
+        assertEquals(myQueue, myQueue.intersection(myQueue));
+    }
     
-//    @Test
-//    public void containsAllTest() {
-//        myQueue.push("Alpha");
-//        myQueue.push("Beta");
-//        myQueue.push("Gamma");
-//        Queue sample = new Queue();
-//        sample.push("Alpha");
-//        sample.push("Beta");
-//        assertTrue(sample.containsAll(sample));
-//        assertTrue(myQueue.containsAll((Collection) sample));
-//        assertFalse(sample.containsAll((Collection) myQueue));
-//        sample.push("Omega");
-//        assertFalse(myQueue.containsAll((Collection) sample));
-//    }
+    @Test
+    public void sortTest() {
+        QueueInt myStack = new QueueInt();
+        myStack.push(1);
+        myStack.push(5);
+        myStack.push(2);
+        myStack.push(4);
+        myStack.push(3);
+       // myStack.sort();
+       fail("Unimplemented method!");
+    }
 }
