@@ -5,12 +5,11 @@
  */
 package ph.edu.dlsu.datasal.chan.test;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import ph.edu.dlsu.datasal.chan.myarraylist.MyLinkedList;
+import ph.edu.dlsu.datasal.chan.myarraylist.MyArrayList;
 import ph.edu.dlsu.datasal.chan.myarraylist.MyArrayListInt;
 import ph.edu.dlsu.datasal.chan.myexception.ListIndexOutOfBoundsException;
 
@@ -20,38 +19,30 @@ import ph.edu.dlsu.datasal.chan.myexception.ListIndexOutOfBoundsException;
  */
 public class MyArrayListTest {
 
-    public MyArrayListTest() {
-    }
+    private MyArrayList list;
 
     @Before
     public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
+        list = new MyArrayList<>();
     }
 
     @Test
     public void isEmptyTest() {
-        MyLinkedList list = new MyLinkedList<>();
         assertTrue(list.isEmpty());
     }
 
     @Test
     public void initialSizeTest() {
-        MyLinkedList list = new MyLinkedList<>();
         assertTrue(list.size() == 0);
     }
 
     @Test(expected = ListIndexOutOfBoundsException.class)
     public void removeWithEmptyListTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.remove(1);
     }
 
     @Test(expected = ListIndexOutOfBoundsException.class)
     public void addGetTest() {
-        MyLinkedList list = new MyLinkedList<>();
         /* Invalid since our list starts at 1: */
         list.add(0, "Zero");
         /* Invalid since our list has no elements yet */
@@ -85,7 +76,6 @@ public class MyArrayListTest {
 
     @Test
     public void containsTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add(1, "Alpha");
         list.add(2, "Beta");
         list.add(3, "Gamma");
@@ -97,7 +87,6 @@ public class MyArrayListTest {
 
     @Test
     public void removeElementTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add(1, "Alpha");
         list.add(2, "Beta");
         list.add(3, "Gamma");
@@ -108,7 +97,6 @@ public class MyArrayListTest {
 
     @Test
     public void clearTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add(1, "Alpha");
         list.add(2, "Beta");
         list.add(3, "Gamma");
@@ -118,11 +106,10 @@ public class MyArrayListTest {
 
     @Test
     public void containsAllTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add(1, "Alpha");
         list.add(2, "Beta");
         list.add(3, "Gamma");
-        MyLinkedList sample = new MyLinkedList<>();
+        MyArrayList sample = new MyArrayList<>();
         sample.add("Alpha");
         sample.add("Beta");
         assertTrue(list.containsAll(sample));
@@ -134,8 +121,7 @@ public class MyArrayListTest {
 
     @Test
     public void addAllTest() {
-        MyLinkedList list = new MyLinkedList<>();
-        MyLinkedList sample = new MyLinkedList<>();
+        MyArrayList sample = new MyArrayList<>();
         sample.add("Alpha");
         sample.add("Beta");
         list.addAll(sample);
@@ -146,11 +132,10 @@ public class MyArrayListTest {
 
     @Test
     public void removeAllTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add(1, "Alpha");
         list.add(2, "Beta");
         list.add(3, "Gamma");
-        MyLinkedList sample = new MyLinkedList<>();
+        MyArrayList sample = new MyArrayList<>();
         sample.add("Alpha");
         sample.add("Beta");
         list.removeAll(sample);
@@ -162,10 +147,9 @@ public class MyArrayListTest {
 
     @Test
     public void equalsTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add("Alpha");
         list.add("Beta");
-        MyLinkedList sample = new MyLinkedList<>();
+        MyArrayList sample = new MyArrayList<>();
         sample.add("Alpha");
         sample.add("Beta");
         assertTrue(list.equals(sample));
@@ -177,10 +161,9 @@ public class MyArrayListTest {
 
     @Test
     public void intersectionTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add("Alpha");
         list.add("Beta");
-        MyLinkedList sample = new MyLinkedList<>();
+        MyArrayList sample = new MyArrayList<>();
         sample.add("Alpha");
         sample.add("Beta");
         sample.add("Gamma");
@@ -191,18 +174,18 @@ public class MyArrayListTest {
 
     @Test
     public void sortTest() {
-        MyArrayListInt list = new MyArrayListInt();
-        list.add(1);
-        list.add(5);
-        list.add(2);
-        list.add(4);
-        list.add(3);
-        list.sort();
-        assertTrue(list.get(1) == 1);
-        assertTrue(list.get(2) == 2);
-        assertTrue(list.get(3) == 3);
-        assertTrue(list.get(4) == 4);
-        assertTrue(list.get(5) == 5);
+        MyArrayListInt intList = new MyArrayListInt();
+        intList.add(1);
+        intList.add(5);
+        intList.add(2);
+        intList.add(4);
+        intList.add(3);
+        intList.sort();
+        assertTrue(intList.get(1) == 1);
+        assertTrue(intList.get(2) == 2);
+        assertTrue(intList.get(3) == 3);
+        assertTrue(intList.get(4) == 4);
+        assertTrue(intList.get(5) == 5);
     }
 
 }

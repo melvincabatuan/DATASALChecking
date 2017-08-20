@@ -9,8 +9,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import ph.edu.dlsu.datasal.chan.myarraylist.MyLinkedList;
 import ph.edu.dlsu.datasal.chan.myexception.ListIndexOutOfBoundsException;
+import ph.edu.dlsu.datasal.chan.mylinkedlist.MyLinkedList;
 import ph.edu.dlsu.datasal.chan.mylinkedlist.MyLinkedListInt;
 
 /**
@@ -19,38 +19,30 @@ import ph.edu.dlsu.datasal.chan.mylinkedlist.MyLinkedListInt;
  */
 public class MyLinkedListTest {
 
-    public MyLinkedListTest() {
-    }
+    private MyLinkedList list;
 
     @Before
     public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
+        list = new MyLinkedList<>();
     }
 
     @Test
     public void isEmptyTest() {
-        MyLinkedList list = new MyLinkedList<>();
         assertTrue(list.isEmpty());
     }
 
     @Test
     public void initialSizeTest() {
-        MyLinkedList list = new MyLinkedList<>();
         assertTrue(list.size() == 0);
     }
 
     @Test(expected = ListIndexOutOfBoundsException.class)
     public void removeWithEmptyListTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.remove(1);
     }
 
     @Test(expected = ListIndexOutOfBoundsException.class)
     public void addGetTest() {
-        MyLinkedList list = new MyLinkedList<>();
         /* Invalid since our list starts at 1: */
         list.add(0, "Zero");
         /* Invalid since our list has no elements yet */
@@ -84,7 +76,6 @@ public class MyLinkedListTest {
 
     @Test
     public void containsTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add(1, "Alpha");
         list.add(2, "Beta");
         list.add(3, "Gamma");
@@ -96,7 +87,6 @@ public class MyLinkedListTest {
 
     @Test
     public void removeElementTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add(1, "Alpha");
         list.add(2, "Beta");
         list.add(3, "Gamma");
@@ -107,7 +97,6 @@ public class MyLinkedListTest {
 
     @Test
     public void clearTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add(1, "Alpha");
         list.add(2, "Beta");
         list.add(3, "Gamma");
@@ -117,7 +106,6 @@ public class MyLinkedListTest {
 
     @Test
     public void containsAllTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add(1, "Alpha");
         list.add(2, "Beta");
         list.add(3, "Gamma");
@@ -133,7 +121,6 @@ public class MyLinkedListTest {
 
     @Test
     public void addAllTest() {
-        MyLinkedList list = new MyLinkedList<>();
         MyLinkedList sample = new MyLinkedList<>();
         sample.add("Alpha");
         sample.add("Beta");
@@ -145,7 +132,6 @@ public class MyLinkedListTest {
 
     @Test
     public void removeAllTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add(1, "Alpha");
         list.add(2, "Beta");
         list.add(3, "Gamma");
@@ -161,7 +147,6 @@ public class MyLinkedListTest {
 
     @Test
     public void equalsTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add("Alpha");
         list.add("Beta");
         MyLinkedList sample = new MyLinkedList<>();
@@ -176,7 +161,6 @@ public class MyLinkedListTest {
 
     @Test
     public void intersectionTest() {
-        MyLinkedList list = new MyLinkedList<>();
         list.add("Alpha");
         list.add("Beta");
         MyLinkedList sample = new MyLinkedList<>();
@@ -190,18 +174,18 @@ public class MyLinkedListTest {
 
     @Test
     public void sortTest() {
-        MyLinkedListInt list = new MyLinkedListInt();
-        list.add(1);
-        list.add(5);
-        list.add(2);
-        list.add(4);
-        list.add(3);
-        list.sort();
-        assertTrue(list.get(1) == 1);
-        assertTrue(list.get(2) == 2);
-        assertTrue(list.get(3) == 3);
-        assertTrue(list.get(4) == 4);
-        assertTrue(list.get(5) == 5);
+        MyLinkedListInt intList = new MyLinkedListInt();
+        intList.add(1);
+        intList.add(5);
+        intList.add(2);
+        intList.add(4);
+        intList.add(3);
+        intList.sort();
+        assertTrue(intList.get(1) == 1);
+        assertTrue(intList.get(2) == 2);
+        assertTrue(intList.get(3) == 3);
+        assertTrue(intList.get(4) == 4);
+        assertTrue(intList.get(5) == 5);
     }
 
 }

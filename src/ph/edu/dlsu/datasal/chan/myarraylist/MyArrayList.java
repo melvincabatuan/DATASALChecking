@@ -8,7 +8,7 @@ package ph.edu.dlsu.datasal.chan.myarraylist;
 
 
 /*
- * File: MyLinkedList.java
+ * File: MyArrayList.java
  * ------------------
  * This is the List ADT implementation
  */
@@ -17,10 +17,13 @@ package ph.edu.dlsu.datasal.chan.myarraylist;
 import ph.edu.dlsu.datasal.chan.myexception.ListFullException;
 import ph.edu.dlsu.datasal.chan.myexception.ListIndexOutOfBoundsException;
 import ph.edu.dlsu.datasal.chan.myinterface.*;
+import acm.program.*;
+import acm.util.*;
 import java.util.Arrays;
+import java.util.Collection;
 
 
-public class MyLinkedList<E> implements List<E>{
+public class MyArrayList<E> implements List<E>{
 
     /// private data fields
     private final int DEF_MAX = 100;
@@ -29,11 +32,13 @@ public class MyLinkedList<E> implements List<E>{
     private int NumItems;                  // current size of list
 
 
-    public MyLinkedList(){
+
+
+    public MyArrayList(){
           items = (E[])new Object[MAX_LIST]; 
           NumItems = 0;
     }
-    public MyLinkedList(int MaxList){//RIP naming conventions haha for convenience
+    public MyArrayList(int MaxList){//RIP naming conventions haha for convenience
            MAX_LIST=MaxList;
           items = (E[])new Object[MAX_LIST]; 
           NumItems = 0;
@@ -148,7 +153,7 @@ public class MyLinkedList<E> implements List<E>{
         }
         return false;
     }
-    public boolean containsAll(MyLinkedList<E> c){
+    public boolean containsAll(MyArrayList<E> c){
         for(int i=1;i<=c.size();i++){
             E item=c.get(i);
             if(!contains(item)){
@@ -157,7 +162,7 @@ public class MyLinkedList<E> implements List<E>{
         }
         return true;
     }
-    public boolean addAll(MyLinkedList<E> c){
+    public boolean addAll(MyArrayList<E> c){
         
         for(int i=1;i<=c.size();i++){
             E item=c.get(i);
@@ -165,7 +170,7 @@ public class MyLinkedList<E> implements List<E>{
         }
         return true;
     }
-    public boolean removeAll(MyLinkedList<E> c){
+    public boolean removeAll(MyArrayList<E> c){
         boolean isChanged=false;
         for(int i=1;i<=c.size();i++){
             E item=c.get(i);
@@ -179,8 +184,8 @@ public class MyLinkedList<E> implements List<E>{
         NumItems=0;
     }
     public boolean equals(Object o){
-        if(o instanceof MyLinkedList){
-            MyLinkedList comp=(MyLinkedList)o;
+        if(o instanceof MyArrayList){
+            MyArrayList comp=(MyArrayList)o;
             if(comp.size()!=size()){
                 return false;
             }
@@ -194,8 +199,8 @@ public class MyLinkedList<E> implements List<E>{
             return false;
         }
     }
-    public MyLinkedList<E> intersection(MyLinkedList<E> comp){
-        MyLinkedList<E> ans=new MyLinkedList<>(size()>comp.size()?
+    public MyArrayList<E> intersection(MyArrayList<E> comp){
+        MyArrayList<E> ans=new MyArrayList<>(size()>comp.size()?
                 size()+10:comp.size()+10);//ternary operator
         for(int i=0;i<size();i++){
             E item=items[i];

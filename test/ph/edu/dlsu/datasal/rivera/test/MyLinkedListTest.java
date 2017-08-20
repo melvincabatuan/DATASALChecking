@@ -20,16 +20,10 @@ public class MyLinkedListTest {
 
     private MyLinkedList list;
 
-    public MyLinkedListTest() {
-    }
 
     @Before
     public void setUp() {
         list = new MyLinkedList<>();
-    }
-
-    @After
-    public void tearDown() {
     }
 
     @Test

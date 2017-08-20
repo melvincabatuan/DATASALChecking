@@ -5,7 +5,6 @@
  */
 package ph.edu.dlsu.datasal.rivera.test;
 
-import ph.edu.dlsu.datasal.rivera.test.*;
 import java.util.logging.Logger;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

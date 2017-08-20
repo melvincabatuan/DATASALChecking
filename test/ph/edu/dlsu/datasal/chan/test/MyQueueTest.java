@@ -8,9 +8,7 @@ package ph.edu.dlsu.datasal.chan.test;
 import java.util.ArrayList;
 import java.util.Collection;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import ph.edu.dlsu.datasal.chan.myexception.QueueEmptyException;
@@ -158,26 +156,27 @@ public class MyQueueTest {
 
     @Test
     public void intersectionTest() {
-        myQueue.push("Alpha");
-        myQueue.push("Beta");
-        Queue sample = new Queue();
-        sample.push("Alpha");
-        sample.push("Beta");
-        sample.push("Gamma");
-        assertEquals(myQueue, myQueue.intersection(sample));
-        assertEquals(myQueue, sample.intersection(myQueue));
-        assertEquals(myQueue, myQueue.intersection(myQueue));
+        fail("This method is not yet implemented");
+//        myQueue.push("Alpha");
+//        myQueue.push("Beta");
+//        Queue sample = new Queue();
+//        sample.push("Alpha");
+//        sample.push("Beta");
+//        sample.push("Gamma");
+//        assertEquals(myQueue, myQueue.intersection(sample));
+//        assertEquals(myQueue, sample.intersection(myQueue));
+//        assertEquals(myQueue, myQueue.intersection(myQueue));
     }
     
     @Test
     public void sortTest() {
-        QueueInt myStack = new QueueInt();
-        myStack.push(1);
-        myStack.push(5);
-        myStack.push(2);
-        myStack.push(4);
-        myStack.push(3);
-       // myStack.sort();
-       fail("Unimplemented method!");
+        fail("This method is not yet implemented");
+//        QueueInt myStack = new QueueInt();
+//        myStack.push(1);
+//        myStack.push(5);
+//        myStack.push(2);
+//        myStack.push(4);
+//        myStack.push(3);
+       // myStack.sort();       
     }
 }

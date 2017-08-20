@@ -1,7 +1,7 @@
 package ph.edu.dlsu.datasal.chan.myqueue;
 
 import java.util.Collection;
-import ph.edu.dlsu.datasal.chan.mylinkedlist.MyList;
+import ph.edu.dlsu.datasal.chan.mylinkedlist.MyLinkedList;
 
 /* © 2017 by Patrick Matthew Chan */
 
@@ -48,7 +48,6 @@ public class Queue<E> extends QueueBasic<E>{
         }
         return true;
     }
-    
     public boolean addAll(Collection<? extends E> c){
         for(Object o:c){
             try{
@@ -89,9 +88,5 @@ public class Queue<E> extends QueueBasic<E>{
             return false;
         }
     }
-    public Queue<E> intersection(Queue<E> comp){
-        return null;
-    }
-    
     
 }

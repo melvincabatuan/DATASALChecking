@@ -24,9 +24,9 @@ public class MyBstTest {
 
     @Before
     public void setUp() {
-        bst = new BinarySearchTree(8);
-        bst.add(3, 1, 6, 4, 7);           // left subtree
-        bst.add(10, 14, 13);            // right subtree
+//        bst = new BinarySearchTree(8);
+//        bst.add(3, 1, 6, 4, 7);           // left subtree
+//        bst.add(10, 14, 13);            // right subtree
     }
 
     @Test
