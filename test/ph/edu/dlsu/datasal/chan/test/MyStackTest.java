@@ -162,14 +162,14 @@ public class MyStackTest {
         myStack.sort();
         
         // if highest is TOS
-//        assertTrue(myStack.top() == 5);
-//        myStack.pop();
-//        assertTrue(myStack.top() == 4);
-//        myStack.pop();
-//        assertTrue(myStack.top() == 3);
-//        myStack.pop();
-//        assertTrue(myStack.top() == 2);
-//        myStack.pop();
-//        assertTrue(myStack.top() == 1);
+        assertTrue(myStack.top() == 5);
+        myStack.pop();
+        assertTrue(myStack.top() == 4);
+        myStack.pop();
+        assertTrue(myStack.top() == 3);
+        myStack.pop();
+        assertTrue(myStack.top() == 2);
+        myStack.pop();
+        assertTrue(myStack.top() == 1);
     }
 }

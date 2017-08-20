@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ph.edu.dlsu.datasal.simeon.test;
+package ph.edu.dlsu.datasal.ang.test;
 
 import org.junit.After;
 import org.junit.Before;
@@ -29,6 +29,9 @@ public class MyBstTest {
 //        bst.add(10, 14, 13);            // right subtree
     }
 
+    @After
+    public void tearDown() {
+    }
 
     @Test
     public void bstSearchTest() {
