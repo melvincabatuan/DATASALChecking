@@ -3,11 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package datasal.Narag.myExceptions;
 
 /**
  *
- * @author student
+ * @author Administrator
  */
-class Collection<T> {
-    
-}
+class ListEmptyException extends RuntimeException{
+    public ListEmptyException(String s){ 
+        super(s);
+    }//end constructor
+} 
