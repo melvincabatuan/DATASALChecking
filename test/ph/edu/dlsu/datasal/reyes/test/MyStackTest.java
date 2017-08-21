@@ -3,28 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ph.edu.dlsu.datasal.simeon.test;
+package ph.edu.dlsu.datasal.reyes.test;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import ph.edu.dlsu.datasal.SIMEON.mystack.Stack;
+import ph.edu.dlsu.datasal.reyes.datasalapp.stack.mystack;
 
 /**
  *
  * @author cobalt
  */
 public class MyStackTest {
-    
-    private Stack myStack;
+
+    private mystack myStack;
 
     public MyStackTest() {
     }
 
     @Before
     public void setUp() {
-        myStack = new Stack();
+        myStack = new mystack();
     }
 
     @After
@@ -33,7 +33,7 @@ public class MyStackTest {
     }
 
     @Test
-    public void initializationTest() {        
+    public void initializationTest() {
         assertTrue("Stack should be empty!", myStack.isEmpty());
         myStack.push("Alpha");
         assertTrue("Stack should not be empty!", !myStack.isEmpty());
@@ -82,50 +82,53 @@ public class MyStackTest {
 
     @Test
     public void containsAllTest() {
-        myStack.push("Alpha");
-        myStack.push("Beta");
-        myStack.push("Gamma");
-        Stack sample = new Stack();
-        sample.push("Alpha");
-        sample.push("Beta");
-        assertTrue(sample.containsAll(sample));
-        assertTrue(myStack.containsAll(sample));
-        assertFalse(sample.containsAll(myStack));
-        sample.push("Omega");
-        assertFalse(myStack.containsAll(sample));
+        fail();
+//        myStack.push("Alpha");
+//        myStack.push("Beta");
+//        myStack.push("Gamma");
+//        mystack sample = new mystack();
+//        sample.push("Alpha");
+//        sample.push("Beta");
+//        assertTrue(sample.containsAll(sample));
+//        assertTrue(myStack.containsAll(sample));
+//        assertFalse(sample.containsAll(myStack));
+//        sample.push("Omega");
+//        assertFalse(myStack.containsAll(sample));
     }
 
     @Test
     public void addAllTest() {
-        Stack sample = new Stack();
-        sample.push("Alpha");
-        sample.push("Beta");
-        myStack.addAll(sample);
-        assertTrue(myStack.size() == 2);
-        assertTrue(myStack.contains("Alpha"));
-        assertTrue(myStack.contains("Beta"));
+        fail();
+//        mystack sample = new mystack();
+//        sample.push("Alpha");
+//        sample.push("Beta");
+//        myStack.addAll(sample);
+//        assertTrue(myStack.size() == 2);
+//        assertTrue(myStack.contains("Alpha"));
+//        assertTrue(myStack.contains("Beta"));
     }
 
     @Test
     public void removeAllTest() {
-        myStack.push("Alpha");
-        myStack.push("Beta");
-        myStack.push("Gamma");
-        Stack sample = new Stack();
-        sample.push("Alpha");
-        sample.push("Beta");
-        myStack.removeAll(sample);
-        assertTrue(myStack.size() == 1);
-        assertFalse(myStack.contains("Alpha"));
-        assertFalse(myStack.contains("Beta"));
-        assertTrue(myStack.contains("Gamma"));
+        fail();
+//        myStack.push("Alpha");
+//        myStack.push("Beta");
+//        myStack.push("Gamma");
+//        mystack sample = new mystack();
+//        sample.push("Alpha");
+//        sample.push("Beta");
+//        myStack.removeAll(sample);
+//        assertTrue(myStack.size() == 1);
+//        assertFalse(myStack.contains("Alpha"));
+//        assertFalse(myStack.contains("Beta"));
+//        assertTrue(myStack.contains("Gamma"));
     }
 
     @Test
     public void equalsTest() {
         myStack.push("Alpha");
         myStack.push("Beta");
-        Stack sample = new Stack();
+        mystack sample = new mystack();
         sample.push("Alpha");
         sample.push("Beta");
         assertTrue(myStack.equals(sample));
@@ -137,35 +140,37 @@ public class MyStackTest {
 
     @Test
     public void intersectionTest() {
-        myStack.push("Alpha");
-        myStack.push("Beta");
-        Stack sample = new Stack();
-        sample.push("Alpha");
-        sample.push("Beta");
-        sample.push("Gamma");
-        assertTrue(myStack.equals(myStack.intersection(sample)));
-        assertTrue(myStack.equals(sample.intersection(myStack)));
-        assertTrue(myStack.equals(myStack.intersection(myStack)));
+        fail();
+//        myStack.push("Alpha");
+//        myStack.push("Beta");
+//        mystack sample = new mystack();
+//        sample.push("Alpha");
+//        sample.push("Beta");
+//        sample.push("Gamma");
+//        assertTrue(myStack.equals(myStack.intersection(sample)));
+//        assertTrue(myStack.equals(sample.intersection(myStack)));
+//        assertTrue(myStack.equals(myStack.intersection(myStack)));
     }
 
     @Test
     public void sortTest() {
-        myStack.push(1);
-        myStack.push(5);
-        myStack.push(2);
-        myStack.push(4);
-        myStack.push(3);
-        myStack.sort(myStack);
-        
+        fail();
+//        myStack.push(1);
+//        myStack.push(5);
+//        myStack.push(2);
+//        myStack.push(4);
+//        myStack.push(3);
+        //      myStack.sort();
+
         // if highest is TOS
-        assertEquals(myStack.top(), 5);
-        myStack.pop();
-        assertEquals(myStack.top(), 4);
-        myStack.pop();
-        assertEquals(myStack.top(), 3);
-        myStack.pop();
-        assertEquals(myStack.top(), 2);
-        myStack.pop();
-        assertEquals(myStack.top(), 1);
+//        assertTrue(myStack.top() == 5);
+//        myStack.pop();
+//        assertTrue(myStack.top() == 4);
+//        myStack.pop();
+//        assertTrue(myStack.top() == 3);
+//        myStack.pop();
+//        assertTrue(myStack.top() == 2);
+//        myStack.pop();
+//        assertTrue(myStack.top() == 1);
     }
 }
